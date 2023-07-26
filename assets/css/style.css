@@ -1,0 +1,112 @@
+:root{
+    --color-primary:#f6d200;
+    --color-grey :#ededed;
+    --color-dark :#000;
+    --color-white :#fff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*, *::after, *::before{    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: var(--color-grey);
+    color:var(--color-dark);
+    line-height: 1.5;
+    font-size: 15px;
+    font-family: 'Asap', sans-serif;
+}
+.site.header {
+    background: var(--color-dark);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.site-title {
+    color: var(--color-white);
+    font-size: 32px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.site-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.site-description {
+    color: var(--color-primary);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: -8px;
+}
+.main-menu {
+    background-color: var(--color-primary);
+}
+.main-menu ul {
+    list-style: none;
+}
+.main-menu ul li a{
+    text-decoration: none;
+    color: var(--color-dark);
+    display: block;
+    padding:6px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    transition:all .5s ease-in-out;
+    text-transform: capitalize;
+}
+.main-menu ul li a:hover ,.main-menu ul li a:focus{
+    background-color: var(--color-dark);
+    color:var(--color-primary);
+}
+
+ /* main-cotent-area */
+.main-cotent-area{
+    background-color:orange;
+}
+.rightsideBar{
+    background-color: blueviolet;
+}
+ 
+.footer{
+    background-color: var(--color-dark);
+    color:var(--color-white);
+    padding:10px 20px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+@media all and(min-width:940px){
+    .main-menu ul{
+        display: flex;
+    }
+    .main-menu ul li{
+        flex-grow: 1;
+    }
+}
+@media all and (min-width:1180px){
+    .content-area{
+        display: flex;
+    }
+    .rightsideBar{
+        /* flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 320px; */
+        flex: 0 0 320px;
+    }
+}
+
